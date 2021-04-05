@@ -52,9 +52,9 @@ phases:
                 targetPort: 8080
             selector:
               app: $_PROJECT_NAME
-EOF
+          EOF
       - |
-          cat  <<EOF | kubectl apply -f -
+          cat <<EOF | kubectl apply -f -
           apiVersion: apps/v1
           kind: Deployment
           metadata:
@@ -92,7 +92,7 @@ EOF
                       timeoutSeconds: 2
                       periodSeconds: 5
                       failureThreshold: 5
-EOF
+          EOF
 
 #cache:
 #  paths:
